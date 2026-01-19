@@ -8,7 +8,7 @@ let phraseIndex = 0
 
 const start = () => {
   const audio = document.createElement('audio')
-  audio.src = 'https://cloud-gi6pwmcsl-hack-club-bot.vercel.app/0aaron_smith_-_dancin__krono_remix_-8pm_koguqpm.mp3'
+  audio.src = '/music.mp3'
   audio.loop = true
   document.querySelector('.container').appendChild(audio)
   audio.style = 'visibility: hidden;'
@@ -24,7 +24,7 @@ const start = () => {
   document.querySelector('body').classList.add('colored-background')
 
   const danceImage = document.createElement('img')
-  danceImage.src = 'https://cloud-mpvs8batk-hack-club-bot.vercel.app/02x-speed-ezgif.com-gif-maker.gif'
+  danceImage.src = '/dance.gif'
   document.querySelector('.container').appendChild(danceImage)
 
   const phraseBox = document.createElement('p')
@@ -46,9 +46,9 @@ const updatePhrase = () => {
   document.querySelector('.phrase-box').innerText = phrases[phraseIndex]
 }
 
-document.onload = () => {
+window.onload = () => {
   if (window.location.hash != '') {
-    start
+    start()
   }
 }
 document.querySelector('.begin').onclick = start
